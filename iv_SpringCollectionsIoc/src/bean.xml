@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	
+	 <!--  Depdency injection via getter setter for property  --> 
+	 
+<!--  
+<bean id="a1" class="com.collectioc.model.Answer">
+	<property name="ano" value="1 "/>
+	<property name="answer" value="Spring is light weight framework"/>
+	<property name="ansby" value="Steave"/>
+</bean>
+
+<bean id="a2" class="com.collectioc.model.Answer">
+	<property name="ano" value="2 "/>
+	<property name="answer" value="Spring contain ioc"/>
+	<property name="ansby" value="Ram"/>
+</bean>
+
+<bean id="a3" class="com.collectioc.model.Answer">
+	<property name="ano" value="3 "/>
+	<property name="answer" value="Spring have artitecture"/>
+	<property name="ansby" value="Sam"/>
+</bean>
+
+
+<bean id="q1" class="com.collectioc.model.Question">
+	
+	<property name="qno" value="1"/>
+	<property name="question" value="What is java ?"></property>
+	<property name="answer" >
+	<list>
+		<ref bean="a1"/>
+		<ref bean="a2"/>
+		<ref bean="a3"/>
+	</list>
+	</property>
+	
+</bean>
+-->
+
+
+ <!--  Depdency injection via constructor for constructor-arg  --> 
+ 
+ 
+ <bean id="a1" class="com.collectioc.model.Answer">
+		
+		<constructor-arg value="1" ></constructor-arg>  
+		<constructor-arg value="Java is a programming language"></constructor-arg>  
+		<constructor-arg value="Steave"/>
+	
+</bean> 
+
+<bean id="a2" class="com.collectioc.model.Answer">
+		
+		<constructor-arg value="2" ></constructor-arg>  
+		<constructor-arg value="Java is a Platform"></constructor-arg>  
+		<constructor-arg value="Sam"/>
+	
+</bean> 
+
+<bean id="a3" class="com.collectioc.model.Answer">
+		
+		<constructor-arg value="3" ></constructor-arg>  
+		<constructor-arg value="Java is oops"></constructor-arg>  
+		<constructor-arg value="Ram"/>
+	
+</bean> 
+	
+ <bean id="q1" class="com.collectioc.model.Question">
+		
+		<constructor-arg value="1" ></constructor-arg>  
+		<constructor-arg value="What is java?"></constructor-arg>  
+		<constructor-arg>  
+		<list>  
+		<ref bean="a1"/>
+		<ref bean="a2"/>
+		<ref bean="a3"/> 
+		</list>  
+		</constructor-arg>  
+	
+</bean>  
+
+
+
+ <bean id="a4" class="com.collectioc.model.Answer">
+		
+		<constructor-arg value="1" ></constructor-arg>  
+		<constructor-arg value="Spring is lightweight"></constructor-arg>  
+		<constructor-arg value="Steave"/>
+	
+</bean> 
+
+<bean id="a5" class="com.collectioc.model.Answer">
+		
+		<constructor-arg value="2" ></constructor-arg>  
+		<constructor-arg value="Spring is a Platform"></constructor-arg>  
+		<constructor-arg value="Sam"/>
+	
+</bean> 
+
+<bean id="a6" class="com.collectioc.model.Answer">
+		
+		<constructor-arg value="3" ></constructor-arg>  
+		<constructor-arg value="Spring is oops"></constructor-arg>  
+		<constructor-arg value="Ram"/>
+	
+</bean> 
+
+<bean id="q2" class="com.collectioc.model.Question">
+		
+		<constructor-arg value="2" type="int"></constructor-arg>  
+		<constructor-arg value="What is spring"></constructor-arg>  
+		<constructor-arg>  
+		<list>
+		<ref bean="a4"/>
+		<ref bean="a5"/>
+		<ref bean="a6"/>
+		</list>
+		</constructor-arg>  
+	
+</bean>  
+
+</beans>

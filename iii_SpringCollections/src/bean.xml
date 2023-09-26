@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	
+	 <!--  Depdency injection via getter setter for property its implementing one argument --> 
+	 
+	 <!--  
+	<bean id="q1" class="com.collections.model.QuestionAnswer">
+	
+	<property name="qno" value="1"/>
+	<property name="question" value="What is java ?"></property>
+	<property name="answers">
+	<list>
+	<value>Java is oops oriented</value>
+	<value>Java high level programming language</value>
+	</list>
+	</property>
+	
+	<property name="qno" value="2"/>
+	<property name="question" value="What is spring ?"></property>
+	<property name="answers">
+	<list>
+	<value>Spring is light weight framework</value>
+	<value>Spring contain artitecture</value>
+	</list>
+	</property>
+	</bean>
+	-->
+	
+		<bean id="q1" class="com.collections.model.QuestionAnswer">
+		
+		<constructor-arg value="1" type="int"></constructor-arg>  
+		<constructor-arg value="What is java?"></constructor-arg>  
+		<constructor-arg>  
+		<list>  
+		<value>Java is a programming language</value>  
+		<value>Java is a Platform</value>  
+		<value>Java is an Island of Indonasia</value>  
+		</list>  
+		</constructor-arg>  
+	
+		</bean>  
+		
+		<bean id="q2" class="com.collections.model.QuestionAnswer">
+		
+		<constructor-arg value="2" type="int"></constructor-arg>  
+		<constructor-arg value="What is spring"></constructor-arg>  
+		<constructor-arg>  
+		<list>  
+		<value>Spring is light weight framework</value>
+	    <value>Spring contain artitecture</value> 
+		</list>  
+		</constructor-arg>  
+	
+		</bean>  
+
+</beans>
